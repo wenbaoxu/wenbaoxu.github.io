@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Manjaro下使用TrueStudio搭建STM32开发环境]]></title>
+    <url>%2F2019%2F08%2F24%2FManjaro%E4%B8%8B%E4%BD%BF%E7%94%A8TrueStudio%E6%90%AD%E5%BB%BASTM32%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[Manjaro下使用TrueStudio搭建STM32开发环境TrueStudio安装1.从Atollic官网下载安装包，根据要求填写相关信息下载 2.选择最新版下载 3.下载完成后进行解压 1tar -xvf ~/Downloads/Atollic_TrueSTUDIO_for_STM32_linux_x86_64_v9.3.0_20190212-0734.tar.gz 4.安装TrueStudio 1cd Atollic_TrueSTUDIO_for_STM32_9.3.0_installer &amp;&amp; sudo ./install.sh 5.启动TrueStudio，通过菜单或命令行 1cd /opt/Atollic_TrueSTUDIO_for_STM32_9.3.0/ide &amp;&amp; ./TrueSTUDIO 6.根据需要修改工作空间 TrueStudio使用新建STM32标准库函数工程 依次点击 「 File 」 -&gt; 「 New 」 -&gt; 「 C Project 」，新建工程 在「 Project name 」处输入工程名字，「 Project type 」选择 「 Embedded C Project 」，其他地方保持默认，点击「 Next 」 根据实际情况选择目标机，其他地方保持默认，点击「 Next 」 运行库选择「 新库（Newlib）标准 」，其他地方保持默认，点击「 Next 」 选择合适的调试器件，点击「 Next 」 点击「 Finish 」，完成工程创建 等待工程创建完成 TrueStudio编译&amp;调试编译调试各按钮功能从左到右依次为「编译工程」，「重新编译工程」，「清理工程编译文件」， 「为项目生成C\C++设置」，「为项目管理生成设置」，「调试」，「配置调试」 点击「调试」，弹出对话框提示进行「调试配置」，在弹出的窗口中根据需要进行设置，这里只对调试接口进行了修改，点击「调试器」，将接口改为「 SWD 」，点击「 Debug 」进入调试界面 遇到的问题调试时出错提示缺少libncurses.so.5，通过网上搜索找到解决办法 输入命令进行安装 1yaourt -S ncurses5-compat-libs 再次点「调试」，正常运行]]></content>
+      <tags>
+        <tag>Manjaro</tag>
+        <tag>TrueStudio</tag>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+</search>
